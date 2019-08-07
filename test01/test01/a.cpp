@@ -1,9 +1,13 @@
 #include<iostream>
 
-
+using std::string;
+using std::cout;
+using std::endl;
 int main()
 {
-	std::cout << "Hello, World!" << std::endl;
+	string str("some string");
+	for (auto c : str)
+		cout << c << endl;
 
 	return 0;
 }
