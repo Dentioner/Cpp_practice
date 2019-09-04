@@ -1,4 +1,4 @@
-//student.cpp -- implementing the Student class
+ï»¿//student.cpp -- implementing the Student class
 //version 00
 
 #include <iostream>
@@ -6,50 +6,31 @@
 
 using namespace std;
 
-Student::Student() {
-	cout << "ÄúºÃÑ½! ÐÂÍ¬Ñ§,Äã½ÐÊ²Ã´Ãû×Ö?" << endl;
-}
-Student::Student(std::string n, int chScore, int enScore, int mathScore) :name(n), ch(chScore), en(enScore), math(mathScore) {
-	cout << "ÄúºÃÑ½! " << name << ",ºÜ¸ßÐË¼ûµ½Äã!" << endl;
-}
-Student::~Student() {
-	cout << "ÔÙ¼û! " << name << "." << endl;
-}
-void Student::setChScore(int score) {
-	Student::ch = score;
-}
-void Student::setName(std::string n) {
-	Student::name = n;
-}
-void Student::setEnScore(int score) {
-	en = score;
-}
-void Student::setMathScore(int score) {
-	math = score;
-}
-void Student::show() {
-	Student::count();
-	ios_base::fmtflags orig = cout.setf(ios_base::fixed, ios_base::floatfield);
-	std::streamsize prec = cout.precision(1);
-	cout << name << " Í¬Ñ§µÄÓïÎÄ³É¼¨Îª" << ch << "·Ö£¬ÊýÑ§³É¼¨Îª" << math << "·Ö£¬Ó¢Óï³É¼¨Îª" << en << "·Ö£¬Æ½¾ù³É¼¨" << average << "·Ö" << endl;
-	cout.setf(orig, ios_base::floatfield);
-}
+typedef class A
+{
+public:
+	int a;
+	A()
+	{
+		a = 20;
+	}
 
+	void plus()
+	{
+		a += 1;
+	}
 
+}A;
 
 int main()
 {
-	Student* s1, s2, s3("Jack", 90, 80, 70);
-	s1 = new Student("Sam", 90, 95, 100);
-	s1->show();
-
-	s2 = Student("Sue", 85, 90, 95);
-	s2.show();
-	s3.show();
-
-	s1 = new Student("Joe", 91, 92, 93);
-	s1->show();
-	delete s1;
-
+	cout << (1 ^ 2) << endl;
+	cout << (1 ^ 3) << endl;
+	cout << (1 ^ 4) << endl;
+	cout << (2 ^ 3) << endl;
+	cout << (2 ^ 4) << endl;
+	cout << (3 ^ 4) << endl;
+	cout << (1 ^ 2 ^ 3) << endl;
+	cout << (1 ^ 2 ^ 4) << endl;
 	return 0;
 }
